@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>eko.energy</title>
     <style>
         * {
@@ -17,7 +17,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            position: relative; 
         }
         .logo-container {
             /* Uses 90% of whichever viewport axis is smaller (width vs height) */
@@ -34,11 +34,41 @@
             height: auto;
             display: block;
         }
+        
+        /* New Footer Styles */
+        .footer {
+            position: absolute;
+            bottom: 30px; /* Base spacing from the bottom */
+            bottom: max(30px, env(safe-area-inset-bottom)); /* Accounts for iPhone home indicators */
+            width: 100%;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .footer a {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: clamp(14px, 3vw, 16px); /* Responsive sizing: scales slightly on mobile */
+            color: #E6C200; /* The deepest moderate gold from your palette */
+            text-decoration: none;
+            font-weight: 550;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease, opacity 0.2s ease;
+        }
+        
+        .footer a:hover, 
+        .footer a:focus {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="logo-container">
         <img src="Code_Generated_Image.png" alt="eko.energy logo 0.2">
+    </div>
+    
+    <div class="footer">
+        <a href="mailto:inquiries@eko.energy">Contact Us: inquiries@eko.energy</a>
     </div>
 </body>
 </html>
