@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="100%" height="100%">
+  <g id="compass-rose">
+    <polygon points="338.55,215.49 361.45,215.49 350.00,203.55" fill="#FFE135" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="361.45,215.49 384.02,219.36 381.16,168.29" fill="#FFD700" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="384.02,219.36 405.61,226.98 424.05,140.43" fill="#FFC300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="405.61,226.98 425.60,238.15 428.03,210.33" fill="#FFB300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="425.60,238.15 443.41,252.54 474.32,196.03" fill="#F4D03F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="443.41,252.54 458.54,269.72 527.01,194.21" fill="#F1C40F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="458.54,269.72 470.54,289.22 497.76,259.02" fill="#E6C200" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="470.54,289.22 479.08,310.47 546.19,271.17" fill="#FFE135" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="479.08,310.47 483.91,332.85 495.81,318.58" fill="#FFD700" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="483.91,332.85 484.88,355.73 536.90,342.06" fill="#FFC300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="484.88,355.73 481.97,378.44 573.15,378.58" fill="#FFB300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="481.97,378.44 475.27,400.34 505.56,397.64" fill="#F4D03F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="475.27,400.34 464.96,420.78 529.12,440.31" fill="#F1C40F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="464.96,420.78 451.34,439.19 541.76,491.83" fill="#E6C200" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="451.34,439.19 434.81,455.03 471.94,477.23" fill="#FFE135" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="434.81,455.03 415.84,467.86 469.91,527.42" fill="#FFD700" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="415.84,467.86 394.97,477.29 412.55,488.38" fill="#FFC300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="394.97,477.29 372.82,483.06 397.82,533.65" fill="#FFB300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="372.82,483.06 350.00,485.00 369.31,576.86" fill="#F4D03F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="350.00,485.00 327.18,483.06 335.97,514.81" fill="#F1C40F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="327.18,483.06 305.03,477.29 298.77,546.75" fill="#E6C200" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="305.03,477.29 284.16,467.86 250.64,569.81" fill="#FFE135" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="284.16,467.86 265.19,455.03 249.80,498.26" fill="#FFD700" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="265.19,455.03 248.66,439.19 199.95,506.56" fill="#FFC300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="248.66,439.19 235.04,420.78 225.72,441.91" fill="#FFB300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="235.04,420.78 224.73,400.34 178.13,436.66" fill="#F4D03F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="224.73,400.34 218.03,378.44 129.71,417.46" fill="#F1C40F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="218.03,378.44 215.12,355.73 183.25,371.35" fill="#E6C200" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="215.12,355.73 216.09,332.85 144.17,341.26" fill="#FFE135" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="216.09,332.85 220.92,310.47 111.55,298.61" fill="#FFD700" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="220.92,310.47 229.46,289.22 181.45,282.27" fill="#FFC300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="229.46,289.22 241.46,269.72 163.04,234.88" fill="#FFB300" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="241.46,269.72 256.59,252.54 231.93,246.09" fill="#F4D03F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="256.59,252.54 274.40,238.15 227.38,198.14" fill="#F1C40F" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="274.40,238.15 294.39,226.98 236.32,146.50" fill="#E6C200" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="294.39,226.98 315.98,219.36 293.09,188.94" fill="#FFE135" stroke="#FDFAF0" stroke-width="1"/>
+    <polygon points="315.98,219.36 338.55,215.49 314.72,144.28" fill="#FFD700" stroke="#FDFAF0" stroke-width="1"/>
+  </g>
+  <circle cx="350.0" cy="350.0" r="136" fill="none" stroke="#FFC300" stroke-width="6" opacity="0.5" />
+  <circle cx="350.0" cy="350.0" r="117" fill="none" stroke="#FFC300" stroke-width="2" opacity="0.25" />
+  <path d="M -64,0 L 82,0 A 82,82 0 0,0 -82,0 A 82,82 0 0,0 45.85,67.98" fill="none" stroke="#FFB300" stroke-width="50" stroke-linecap="round" stroke-linejoin="round" transform="translate(350.0, 350.0) rotate(-35)" />
+</svg>
