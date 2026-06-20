@@ -5,70 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>eko.energy</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
         html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
             background-color: #FDFAF0; /* Seamless transition matching the logo canvas */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative; 
-        }
-        .logo-container {
-            /* Uses 90% of whichever viewport axis is smaller (width vs height) */
-            width: 90vmin;
-            max-width: 550px;
-            max-height: 550px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .logo-container img {
-            width: 100%;
-            height: auto;
-            display: block;
+            display: flex; justify-content: center; align-items: center;
+            overflow: hidden; 
+            position: relative;
+            touch-action: none; 
         }
         
-        /* New Footer Styles */
+        .logo-container {
+            /* Uses 90% of whichever viewport axis is smaller (width vs height) */
+            width: 90vmin; max-width: 550px; max-height: 550px;
+            display: flex; justify-content: center; align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        #preload { display: none; }
+        
+        .logo-container img {
+            width: 100%; height: auto; display: block;
+            transform: translateZ(0); 
+            will-change: src;
+        }
+        
         .footer {
             position: absolute;
             bottom: 30px; /* Base spacing from the bottom */
             bottom: max(30px, env(safe-area-inset-bottom)); /* Accounts for iPhone home indicators */
-            width: 100%;
-            text-align: center;
-            padding: 0 20px;
+            width: 100%; text-align: center; padding: 0 20px;
+            z-index: 10;
         }
         
         .footer a {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: clamp(14px, 3vw, 16px); /* Responsive sizing: scales slightly on mobile */
             color: #E6C200; /* The deepest moderate gold from your palette */
-            text-decoration: none;
-            font-weight: 550;
-            letter-spacing: 0.5px;
+            text-decoration: none; font-weight: 550; letter-spacing: 0.5px;
             transition: color 0.2s ease, opacity 0.2s ease;
         }
         
-        .footer a:hover, 
-        .footer a:focus {
-            opacity: 0.7;
-            text-decoration: underline;
+        .footer a:hover, .footer a:focus {
+            opacity: 0.7; text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="logo-container">
-        <img src="Code_Generated_Image.png" alt="eko.energy logo 0.2">
+        <img id="dynamic-logo" src="logo_step_7.svg" alt="eko.energy logo fidget">
     </div>
     
     <div class="footer">
         <a href="mailto:inquiries@eko.energy">Contact Us: inquiries@eko.energy</a>
     </div>
+
+    <div id="preload"></div>
+
+    <script>
+        const totalFrames = 37;
+        let currentFrame = 7; 
+        const logoImg = document.getElementById('dynamic-logo');
+        const preloadContainer = document.getElementById('preload');
+
+        for (let i = 1; i <= totalFrames; i++) {
+            const img = new Image();
+            img.src = 'logo_step_' + i + '.svg';
+            preloadContainer.appendChild(img);
+        }
+
+        function updateFrame(direction) {
+            currentFrame += direction;
+            if (currentFrame > totalFrames) currentFrame = 1;
+            if (currentFrame < 1) currentFrame = totalFrames;
+            logoImg.src = 'logo_step_' + currentFrame + '.svg';
+        }
+
+        let scrollTimeout;
+        window.addEventListener('wheel', (e) => {
+            if (scrollTimeout) return;
+            const direction = Math.sign(e.deltaY); 
+            if(direction !== 0) {
+                updateFrame(direction);
+            }
+            scrollTimeout = setTimeout(() => { scrollTimeout = null; }, 50);
+        }, { passive: false });
+
+        let touchStartY = 0;
+        window.addEventListener('touchstart', (e) => {
+            touchStartY = e.touches[0].clientY;
+        }, { passive: false });
+
+        window.addEventListener('touchmove', (e) => {
+            e.preventDefault(); 
+            if (!touchStartY) return;
+            let touchEndY = e.touches[0].clientY;
+            let diff = touchStartY - touchEndY;
+            if (Math.abs(diff) > 15) {
+                const direction = Math.sign(diff); 
+                updateFrame(direction);
+                touchStartY = touchEndY; 
+            }
+        }, { passive: false });
+    </script>
 </body>
 </html>
